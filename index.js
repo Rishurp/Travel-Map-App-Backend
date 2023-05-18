@@ -14,6 +14,10 @@
     console.log("MongoDB is Connected....")
  }).catch(err=>console.log(err));
 
+app.use(cors());
+app.get("/", (req, res) > {
+res.setHeader("Access-Control-Allow-Credentials","true");
+
 
 app.use("/api/users",userRoute);
 app.use("/api/pins",pinRoute);
