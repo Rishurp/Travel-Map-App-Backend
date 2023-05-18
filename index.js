@@ -4,13 +4,13 @@
  const app=express();
  const pinRoute = require("./routes/pins");
  const userRoute = require("./routes/users");
- const cors = require('cors')
+ 
 
 
  dotenv.config();
 
  app.use(express.json());
-app.use(cors());
+
 app.get("/", (req, res) => {
 res.setHeader("Access-Control-Allow-Credentials","true");
 res.send("API is running..");
