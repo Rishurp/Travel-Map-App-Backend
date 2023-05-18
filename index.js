@@ -11,10 +11,6 @@
 
  app.use(express.json());
 
-app.get("/", (req, res) => {
-res.setHeader("Access-Control-Allow-Credentials","true");
-res.send("API is running..");
-});
 
  mongoose.connect(process.env.MONGO_URL).then(()=>{
     console.log("MongoDB is Connected....")
